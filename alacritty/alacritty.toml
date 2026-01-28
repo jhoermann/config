@@ -1,0 +1,10 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/nordic.toml"
+]
+
+[window]
+padding = { x = 6, y = 6 }
+
+[font]
+size = 10

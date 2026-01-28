@@ -1,0 +1,33 @@
+#!/bin/sh
+
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor "DP-2" -d I II III IV
+bspc monitor "eDP-2" -d I II III IV
+
+bspc config border_width         1
+bspc config window_gap           6
+
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config paddingless_monocle true
+bspc config single_monocle false
+bspc config focus_follows_pointer true
+bspc config presel_feedback true
+
+# Kill existing programs
+pkill polybar
+pkill lxsession
+pkill xss-lock
+
+# Launch polybar
+MONITOR=DP-2 polybar -q main -c "$HOME"/.config/polybar/config.ini &
+MONITOR=eDP-2 polybar -q main -c "$HOME"/.config/polybar/config.ini &
+
+# Auto-lock when the screensaver kicks in
+xss-lock -- betterlockscreen -l &
+
+# Startup programs
+lxsession &
