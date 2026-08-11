@@ -1,0 +1,8 @@
+swaybg -c '#334455' &
+waybar &
+lxpolkit &
+nm-applet &
+pasystray &
+blueman-applet &
+kanshi &
+vicinae server &
