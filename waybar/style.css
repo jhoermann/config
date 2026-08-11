@@ -1,0 +1,139 @@
+/* ── Nord palette ──────────────────────────────────
+   nord0  #2e3440   nord1  #3b4252   nord2  #434c5e   nord3  #4c566a
+   nord4  #d8dee9   nord5  #e5e9f0   nord6  #eceff4
+   nord7  #8fbcbb   nord8  #88c0d0   nord9  #81a1c1   nord10 #5e81ac
+   nord11 #bf616a   nord12 #d08770   nord13 #ebcb8b   nord14 #a3be8c   nord15 #b48ead
+   ─────────────────────────────────────────────────── */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: rgba(46, 52, 64, 0.92);   /* nord0 */
+    color: #d8dee9;                        /* nord4 */
+}
+
+#ext-workspaces,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#tray,
+#custom-screenshot,
+#custom-power {
+    background: #3b4252;                   /* nord1 */
+    padding: 4px 12px;
+    margin: 4px 3px;
+    border-radius: 10px;
+}
+
+/* ── Taskbar ────────────────────────────────────── */
+#taskbar button {
+    color: #d8dee9;
+    background: #3b4252;
+    border-radius: 4px;
+    padding: 0 10px;
+    margin: 4px 2px;
+    font-weight: normal;
+}
+
+#taskbar button label {
+	font-weight: 400;
+}
+
+#taskbar button:hover {
+    background: #4c566a;
+}
+
+#taskbar button.active {
+    color: #2e3440;
+    background: #88c0d0;
+}
+
+#taskbar button.minimized {
+    color: #4c566a;
+    background: transparent;
+}
+
+/* ── Clock ──────────────────────────────────────── */
+#clock {
+    color: #ebcb8b;                         /* nord13 */
+}
+
+/* ── System stats ───────────────────────────────── */
+#cpu {
+    color: #8fbcbb;                         /* nord7 */
+}
+
+#memory {
+    color: #d08770;                         /* nord12 */
+}
+
+#temperature {
+    color: #a3be8c;                         /* nord14 */
+}
+
+#temperature.critical {
+    color: #bf616a;                         /* nord11 */
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to { color: #eceff4; }
+}
+
+/* ── Screenshot ─────────────────────────────────── */
+#custom-screenshot {
+    color: #81a1c1;                         /* nord9 */
+    font-size: 16px;
+}
+
+#custom-screenshot:hover {
+    color: #88c0d0;                         /* nord8 */
+}
+
+/* ── Power ──────────────────────────────────────── */
+#custom-power {
+    color: #bf616a;                         /* nord11 */
+    font-size: 15px;
+}
+
+#custom-power:hover {
+    color: #d08770;                         /* nord12 */
+}
+
+/* ── Tray ───────────────────────────────────────── */
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: #bf616a;
+    border-radius: 10px;
+}
+
+/* ── Power menu popup (menu-file) ───────────────── */
+menu {
+    background: #2e3440;                     /* nord0 */
+    border: 1px solid #4c566a;              /* nord3 */
+    border-radius: 8px;
+    padding: 4px;
+}
+
+menu menuitem {
+    padding: 6px 16px;
+    color: #d8dee9;
+    border-radius: 6px;
+}
+
+menu menuitem:hover {
+    background: #5e81ac;                     /* nord10 */
+    color: #eceff4;
+}

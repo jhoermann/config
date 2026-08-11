@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<labwc_config>
+  <placement>
+    <policy>automatic</policy>
+  </placement>
+  <desktops number="4">
+    <popupTime>1000</popupTime>
+  </desktops>
+  <focus>
+    <followMouse>yes</followMouse>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+  <core>
+    <gap>6</gap>
+  </core>
+  <keyboard>
+    <default />
+    
+	<keybind key="A-Tab">
+	  <action name="NextWindow" output="cursor" />
+	</keybind>
+	<keybind key="A-S-Tab">
+	  <action name="PreviousWindow" output="cursor" />
+	</keybind>
+
+	<keybind key="XF86AudioRaiseVolume">
+	  <action name="Execute" command="wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+" />
+	</keybind>
+	<keybind key="XF86AudioLowerVolume">
+	  <action name="Execute" command="wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-" />
+	</keybind>
+	<keybind key="XF86AudioMute">
+	  <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+	</keybind>
+	<keybind key="XF86AudioPlay">
+	  <action name="Execute" command="playerctl play-pause" />
+	</keybind>
+	<keybind key="XF86AudioPlayPause">
+	  <action name="Execute" command="playerctl play-pause" />
+	</keybind>
+	<keybind key="XF86AudioPrev">
+	  <action name="Execute" command="playerctl previous" />
+	</keybind>
+	<keybind key="XF86AudioRewind">
+	  <action name="Execute" command="playerctl previous" />
+	</keybind>
+
+	<keybind key="W-space">
+      <action name="Execute" command="vicinae toggle" />
+    </keybind>
+	<keybind key="XF86Calculator">
+	  <action name="Execute" command="gnome-calculator" />
+	</keybind>
+	<keybind key="W-S-s">
+	  <action name="Execute" command="flameshot gui" />
+	</keybind>
+	<keybind key="W-l">
+	  <action name="Execute" command="swaylock" />
+	</keybind>
+
+	<keybind key="W-w">
+	  <action name="Close" />
+	</keybind>
+	<keybind key="W-f">
+	  <action name="ToggleFullscreen" />
+	</keybind>
+	<keybind key="W-Left">
+		<action name="SnapToEdge" direction="left"/>
+	</keybind>
+	<keybind key="W-Right">
+		<action name="SnapToEdge" direction="right"/>
+	</keybind>
+	<keybind key="W-Up">
+		<action name="ToggleMaximize"/>
+	</keybind>
+	<keybind key="W-Down">
+		<action name="Iconify"/>
+	</keybind>
+
+	<keybind key="W-1"><action name="GoToDesktop" to="1" /></keybind>
+	<keybind key="W-2"><action name="GoToDesktop" to="2" /></keybind>
+	<keybind key="W-3"><action name="GoToDesktop" to="3" /></keybind>
+	<keybind key="W-4"><action name="GoToDesktop" to="4" /></keybind>
+	<keybind key="W-S-1"><action name="SendToDesktop" to="1" follow="yes" /></keybind>
+	<keybind key="W-S-2"><action name="SendToDesktop" to="2" follow="yes" /></keybind>
+	<keybind key="W-S-3"><action name="SendToDesktop" to="3" follow="yes" /></keybind>
+	<keybind key="W-S-4"><action name="SendToDesktop" to="4" follow="yes" /></keybind>
+	<keybind key="C-A-Left">
+	  <action name="GoToDesktop" to="left" wrap="yes" />
+	</keybind>
+	<keybind key="C-A-Right">
+	  <action name="GoToDesktop" to="right" wrap="yes" />
+	</keybind>
+  </keyboard>
+</labwc_config>
