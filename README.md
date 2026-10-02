@@ -1,15 +1,14 @@
-# config
-My config files.
+# config (v2)
+My config files. I switched from Arch to Debian stable, from bspwm to labwc and from polybar to waybar in version 2.
 
 ## Software
-- OS: [Arch (btw)](https://archlinux.org/)
-- Window manager: [bspwm](https://github.com/baskerville/bspwm) & [sxhkd](https://github.com/baskerville/sxhkd)
+- OS: [Debian](https://www.debian.org/)
+- Window manager: [labwc](https://labwc.github.io/)
 - Color scheme (everywhere): [Nord](https://www.nordtheme.com/)
-- Top bar: [polybar](https://polybar.github.io/)
-- Compositor: [picom](https://picom.app/)
-- Terminal: [Tilix](https://gnunn1.github.io/tilix-web/) & [Alacritty](https://alacritty.org/)
-- Launcher: [rofi](https://davatorium.github.io/rofi/)
+- Top bar: [waybar](https://waybar.org/)
+- Terminal: [Ghostty](https://ghostty.org/) & [Alacritty](https://alacritty.org/)
+- Launcher: [Vicinae](https://www.vicinae.com/)
 - Notifications: [dunst](https://dunst-project.org/)
 
 ## Screenshot
-<img width="1920" height="1200" alt="bspwm-config" src="https://github.com/user-attachments/assets/45525576-3e4f-41e6-a4d5-75cf8cd8f61a" />
+<img width="2561" height="1440" alt="config-v2" src="https://github.com/user-attachments/assets/e8000598-769c-4a84-8e9d-41f304d6d74b" />
