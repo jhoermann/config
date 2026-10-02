@@ -1,9 +1,13 @@
 swaybg -c '#334455' &
 waybar &
+swayidle -w \
+    timeout 300 'swaylock -f -c 334455' \
+    timeout 600 'wlopm --off \*' \
+    resume 'wlopm --on \*' \
+    before-sleep 'swaylock -f -c 334455' &
 lxpolkit &
 nm-applet &
 pasystray &
-xfce4-power-manager &
 blueman-applet &
 kanshi &
 vicinae server &
