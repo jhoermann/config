@@ -2,7 +2,7 @@
 {
     "spacing": 4,
     "modules-left": [
-    	"wlr/taskbar"
+    	"custom/vicinae"
     ],
     "modules-center": [
         "clock"
@@ -11,13 +11,15 @@
         "cpu",
         "memory",
         "temperature",
+        "battery",
         "tray",
         "custom/screenshot",
         "custom/power"
     ],
-    "wlr/taskbar": {
-        "format": "{app_id}",
-        "on-click": "minimize-raise",
+    "custom/vicinae": {
+        "format": "󰀻",
+        "on-click": "vicinae toggle",
+        "tooltip": false
     },
     "tray": {
         "spacing": 10,
@@ -38,6 +40,13 @@
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["󰉬", "", "󰉪"]
     },
+	"battery": {
+	    "format": "{capacity}% {icon}",
+	    "format-charging": "{capacity}% 󱐋",
+	    "format-plugged": "{capacity}% ",
+	    "format-full": "{capacity}% ",
+	    "format-icons": ["", "", "", "", ""]
+	},
     "custom/screenshot": {
         "format": "󰄄",
         "tooltip-format": "Screenshot",

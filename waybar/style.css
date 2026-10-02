@@ -19,11 +19,12 @@ window#waybar {
     color: #d8dee9;                        /* nord4 */
 }
 
-#ext-workspaces,
+#custom-vicinae,
 #clock,
 #cpu,
 #memory,
 #temperature,
+#battery,
 #tray,
 #custom-screenshot,
 #custom-power {
@@ -86,6 +87,10 @@ window#waybar {
 
 @keyframes blink {
     to { color: #eceff4; }
+}
+
+#battery {
+    color: #ebcb8b;                         /* nord13 */
 }
 
 /* ── Screenshot ─────────────────────────────────── */

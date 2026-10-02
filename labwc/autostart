@@ -3,6 +3,7 @@ waybar &
 lxpolkit &
 nm-applet &
 pasystray &
+xfce4-power-manager &
 blueman-applet &
 kanshi &
 vicinae server &
